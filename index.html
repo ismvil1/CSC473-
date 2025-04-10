@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feane - Fast Food Restaurant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- 🛒 CART SIDEBAR -->
+  <div id="cart" class="cart">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+    <button onclick="clearCart()">Clear Cart</button>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <img src="logo.png" alt="Feane Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Fast Food Restaurant</h1>
+      <p>Delicious meals made fresh for you.</p>
+      <a href="#menu" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="menu-container">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="item" onclick="addToCart('Cheeseburger', 8.99)">Cheeseburger<br>$8.99</div>
+      <div class="item" onclick="addToCart('Fries', 3.99)">Fries<br>$3.99</div>
+      <div class="item" onclick="addToCart('Pizza', 10.99)">Pizza<br>$10.99</div>
+      <div class="item" onclick="addToCart('Hot Dog', 5.49)">Hot Dog<br>$5.49</div>
+      <div class="item" onclick="addToCart('Milkshake', 4.99)">Milkshake<br>$4.99</div>
+      <div class="item" onclick="addToCart('Salad', 6.99)">Salad<br>$6.99</div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="slider">
+      <img src="best-burger.jpg" alt="Food 1">
+      <img src="images.jpeg" alt="Food 2">
+      <img src="pizza.jpeg" alt="Food 3">
+      <img src="hotdog.jpeg" alt="Food 4">
+      <img src="milkshake.jpg" alt="Food 5">
+      <img src="salad.jpeg" alt="Food 6">
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Feane was founded with a passion for serving high-quality fast food made fresh every day. Our secret sauce is the love we put into our meals. Whether it's a juicy burger, crispy fries, or a creamy milkshake, we believe great food brings people together.</p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?..."></iframe>
+      </div>
+      <div class="contact-form">
+        <form>
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Follow us on:</p>
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">Twitter</a>
+    <p>Business Hours: 10 AM - 10 PM</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
